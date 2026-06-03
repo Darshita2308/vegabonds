@@ -83,6 +83,15 @@ textarea {
   transform: translateZ(0);
 }
 
+@media (max-width: 767px) {
+  body,
+  .site-bg {
+    background-size: contain;
+    background-position: center center;
+    background-attachment: scroll;
+  }
+}
+
 main {
   position: relative;
   z-index: 1;
@@ -1034,6 +1043,8 @@ h3 {
   .site-bg,
   .hero::before {
     background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
   }
 
   .site-bg {
@@ -1043,10 +1054,23 @@ h3 {
       linear-gradient(315deg, rgba(232, 184, 109, 0.12), transparent 38%),
       linear-gradient(180deg, rgba(5, 6, 8, 0.02), rgba(5, 6, 8, 0.72)),
       url("v.jpeg");
-    background-size: auto 100svh;
-    background-position: 52% top;
+    background-size: contain;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+  }
+
+  .hero-stats,
+  .mini-grid {
+    grid-template-columns: 1fr;
+    gap: 0.95rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat-card,
+  .mini-card {
+    padding: 0.95rem;
+    border-radius: 16px;
   }
 
   .section {
@@ -1061,7 +1085,16 @@ h3 {
 
   .hero-copy {
     width: min(100%, calc(100% - 18px));
-    padding-top: clamp(8rem, 20vh, 11rem);
+    padding-top: clamp(8rem, 18vh, 11rem);
+  }
+
+  .hero-badges {
+    gap: 0.45rem;
+  }
+
+  .badge-chip {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
   }
 
   .hero-light {
@@ -1080,8 +1113,17 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(4rem, 20vw, 6.2rem);
-    word-break: break-word;
+    margin-top: clamp(3rem, 8vh, 4.2rem);
+    margin-bottom: 1rem;
+    font-size: clamp(3rem, 16vw, 5.2rem);
+    line-height: 0.94;
+    letter-spacing: 0.08em;
+    word-break: normal;
+  }
+
+  .tagline,
+  .hero-intro {
+    max-width: 100%;
   }
 
   .hero-actions,
@@ -1107,9 +1149,15 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .member-card {
+    width: 100%;
+  }
+
   .member-photo {
-    min-height: 320px;
-    background-size: 820px auto;
+    min-height: 280px;
+    aspect-ratio: 4 / 5;
+    background-size: cover;
+    background-position: center;
   }
 }
 
