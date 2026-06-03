@@ -34,13 +34,11 @@ body {
   color: var(--white);
   font-family: "Inter", Arial, sans-serif;
   background-color: #040507;
-  background:
-    linear-gradient(180deg, rgba(5, 6, 8, 0.36), rgba(5, 6, 8, 0.82)),
-    url("v.jpeg");
-  background-size: cover;
-  background-position: center 30%;
+  background: linear-gradient(180deg, rgba(5, 6, 8, 0.36), rgba(5, 6, 8, 0.82));
+  background-size: auto;
+  background-position: center top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -253,9 +251,9 @@ main {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 160px;
+  padding-top: 120px;
   padding-bottom: clamp(2.5rem, 7vw, 6rem);
   background: transparent;
   backdrop-filter: none;
@@ -269,7 +267,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("v.jpeg") center 30% / cover no-repeat fixed;
+  background: url("v.jpeg") center top / cover no-repeat scroll;
   filter: contrast(1.08) brightness(0.82) saturate(0.94);
   transform: translate3d(0, calc(var(--hero-offset, 0) * -0.12), 0);
   transition: transform 220ms ease-out;
@@ -416,7 +414,7 @@ main {
   z-index: 3;
   width: min(900px, calc(100% - 40px));
   margin: 0 auto;
-  padding: clamp(18rem, 42vh, 30rem) 0 0;
+  padding: clamp(12rem, 28vh, 24rem) 0 0;
 }
 
 .eyebrow {
@@ -1043,8 +1041,8 @@ h3 {
   .site-bg,
   .hero::before {
     background-attachment: scroll;
-    background-size: contain;
-    background-position: center 35%;
+    background-size: cover;
+    background-position: center top;
   }
 
   .site-bg {
@@ -1054,13 +1052,16 @@ h3 {
       linear-gradient(315deg, rgba(232, 184, 109, 0.12), transparent 38%),
       linear-gradient(180deg, rgba(5, 6, 8, 0.02), rgba(5, 6, 8, 0.72)),
       url("v.jpeg");
-    background-size: contain;
-    background-position: center center;
+    background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
 
-  .hero-stats,
+  .hero-stats {
+    display: none;
+  }
+
   .mini-grid {
     grid-template-columns: 1fr;
     gap: 0.95rem;
