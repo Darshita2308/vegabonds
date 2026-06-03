@@ -38,7 +38,7 @@ body {
     linear-gradient(180deg, rgba(5, 6, 8, 0.36), rgba(5, 6, 8, 0.82)),
     url("v.jpeg");
   background-size: cover;
-  background-position: center top;
+  background-position: center 30%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   line-height: 1.6;
@@ -77,7 +77,7 @@ textarea {
     linear-gradient(180deg, rgba(5, 6, 8, 0.02), rgba(5, 6, 8, 0.64) 58%, rgba(5, 6, 8, 0.92)),
     url("v.jpeg");
   background-size: cover;
-  background-position: center top;
+  background-position: center 30%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   transform: translateZ(0);
@@ -269,7 +269,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("v.jpeg") center top / cover no-repeat fixed;
+  background: url("v.jpeg") center 30% / cover no-repeat fixed;
   filter: contrast(1.08) brightness(0.82) saturate(0.94);
   transform: translate3d(0, calc(var(--hero-offset, 0) * -0.12), 0);
   transition: transform 220ms ease-out;
@@ -416,7 +416,7 @@ main {
   z-index: 3;
   width: min(900px, calc(100% - 40px));
   margin: 0 auto;
-  padding: clamp(11rem, 26vh, 18rem) 0 0;
+  padding: clamp(13rem, 30vh, 22rem) 0 0;
 }
 
 .eyebrow {
@@ -1043,8 +1043,8 @@ h3 {
   .site-bg,
   .hero::before {
     background-attachment: scroll;
-    background-size: cover;
-    background-position: center center;
+    background-size: contain;
+    background-position: center 35%;
   }
 
   .site-bg {
@@ -1085,7 +1085,7 @@ h3 {
 
   .hero-copy {
     width: min(100%, calc(100% - 18px));
-    padding-top: clamp(8rem, 18vh, 11rem);
+    padding-top: clamp(10rem, 24vh, 14rem);
   }
 
   .hero-badges {
