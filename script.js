@@ -18,6 +18,16 @@ navLinks?.addEventListener("click", (event) => {
 
 contactForm?.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  const formData = new FormData(contactForm);
+  const name = formData.get("name")?.toString().trim() || "Guest";
+  const email = formData.get("email")?.toString().trim() || "No email provided";
+  const message = formData.get("message")?.toString().trim() || "";
+
+  const subject = encodeURIComponent(`Vagabonds query from ${name}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+  window.location.href = `mailto:query@vagabondsband.com?subject=${subject}&body=${body}`;
+
   contactForm.reset();
 });
 
