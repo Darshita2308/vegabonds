@@ -249,13 +249,13 @@ main {
 }
 
 .hero {
-  min-height: 110vh;
+  min-height: 120vh;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  padding-top: 84px;
+  padding-top: 160px;
   padding-bottom: clamp(2.5rem, 7vw, 6rem);
   background: transparent;
   backdrop-filter: none;
@@ -416,7 +416,7 @@ main {
   z-index: 3;
   width: min(900px, calc(100% - 40px));
   margin: 0 auto;
-  padding: clamp(13rem, 30vh, 22rem) 0 0;
+  padding: clamp(16rem, 36vh, 26rem) 0 0;
 }
 
 .eyebrow {
@@ -437,7 +437,7 @@ p {
 
 h1 {
   max-width: 900px;
-  margin-top: clamp(4rem, 10vw, 8rem);
+  margin-top: clamp(5rem, 11vw, 9rem);
   margin-bottom: 1.5rem;
   font-size: clamp(4rem, 14vw, 10rem);
   line-height: 0.86;
@@ -1080,12 +1080,12 @@ h3 {
 
   .hero {
     min-height: 100vh;
-    padding-top: 72px;
+    padding-top: 100px;
   }
 
   .hero-copy {
     width: min(100%, calc(100% - 18px));
-    padding-top: clamp(10rem, 24vh, 14rem);
+    padding-top: clamp(12rem, 28vh, 18rem);
   }
 
   .hero-badges {
